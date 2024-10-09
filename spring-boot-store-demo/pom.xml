@@ -9,11 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
-	<groupId>com.linkedinlearning</groupId>
+	<groupId>io.github.dabico.store</groupId>
 	<artifactId>spring-boot-store-demo</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>spring-boot-store-demo</name>
-	<description>Demo project for Spring Boot</description>
 
 	<properties>
 		<java.version>17</java.version>
