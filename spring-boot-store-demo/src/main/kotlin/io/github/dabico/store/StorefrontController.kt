@@ -1,7 +1,7 @@
-package com.linkedinlearning.springbootstoredemo
+package io.github.dabico.store
 
-import com.linkedinlearning.springbootstoredemo.service.ProductService
-import com.linkedinlearning.springbootstoredemo.ui.ProductViewItem
+import io.github.dabico.store.service.ProductService
+import io.github.dabico.store.ui.ProductViewItem
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.core.convert.ConversionService
 import org.springframework.stereotype.Controller

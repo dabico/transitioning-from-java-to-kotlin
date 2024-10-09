@@ -1,4 +1,4 @@
-package com.linkedinlearning.springbootstoredemo.model
+package io.github.dabico.store.model
 
 /**
  * A product available in the store

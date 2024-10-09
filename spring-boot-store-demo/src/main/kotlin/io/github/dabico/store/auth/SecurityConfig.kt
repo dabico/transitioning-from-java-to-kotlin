@@ -1,4 +1,4 @@
-package com.linkedinlearning.springbootstoredemo.auth
+package io.github.dabico.store.auth
 
 import org.springframework.boot.autoconfigure.security.servlet.PathRequest
 import org.springframework.context.annotation.Bean

@@ -1,7 +1,7 @@
-package com.linkedinlearning.springbootstoredemo.converter
+package io.github.dabico.store.converter
 
-import com.linkedinlearning.springbootstoredemo.model.Product
-import com.linkedinlearning.springbootstoredemo.ui.ProductViewItem
+import io.github.dabico.store.model.Product
+import io.github.dabico.store.ui.ProductViewItem
 import org.springframework.core.convert.converter.Converter
 import org.springframework.stereotype.Component
 

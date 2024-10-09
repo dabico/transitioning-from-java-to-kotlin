@@ -1,6 +1,6 @@
-package com.linkedinlearning.springbootstoredemo.service
+package io.github.dabico.store.service
 
-import com.linkedinlearning.springbootstoredemo.model.Product
+import io.github.dabico.store.model.Product
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.jdbc.core.BeanPropertyRowMapper
 import org.springframework.jdbc.core.JdbcTemplate

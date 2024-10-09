@@ -1,4 +1,4 @@
-package com.linkedinlearning.springbootstoredemo.ui
+package io.github.dabico.store.ui
 
 /**
  * A UI-facing representation of a [com.linkedinlearning.springbootstoredemo.model.Product]

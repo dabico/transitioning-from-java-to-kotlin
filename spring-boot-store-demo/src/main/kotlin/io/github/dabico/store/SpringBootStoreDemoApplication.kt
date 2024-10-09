@@ -1,4 +1,4 @@
-package com.linkedinlearning.springbootstoredemo
+package io.github.dabico.store
 
 import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
