@@ -20,9 +20,7 @@ class StorefrontController @Autowired constructor(
     @GetMapping("/storefront")
     fun showProducts(): ModelAndView {
         val products = productService.allProducts()
-        val productViewItems = products.stream().map {
-                product -> conversionService.convert(product, ProductViewItem::class.java)
-        }
-        return ModelAndView("Storefront", hashMapOf("products" to productViewItems.toList()))
+        val viewItems = products.map { conversionService.convert(it, ProductViewItem::class.java) }
+        return ModelAndView("Storefront", hashMapOf("products" to viewItems.toList()))
     }
 }
