@@ -1,4 +1,4 @@
-package io.github.dabico.store
+package io.github.dabico.store.controller
 
 import io.github.dabico.store.service.ProductService
 import io.github.dabico.store.ui.ProductViewItem
