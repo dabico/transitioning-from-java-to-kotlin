@@ -1,3 +1,5 @@
+val exposedVersion: String by project
+val h2Version: String by project
 val logbackVersion: String by project
 
 plugins {
@@ -26,6 +28,12 @@ dependencies {
     implementation("io.ktor:ktor-server-call-logging-jvm")
     implementation("io.ktor:ktor-server-content-negotiation-jvm")
     implementation("io.ktor:ktor-serialization-kotlinx-json-jvm")
+
+    implementation("org.jetbrains.exposed:exposed-core:${exposedVersion}")
+    implementation("org.jetbrains.exposed:exposed-dao:${exposedVersion}")
+    implementation("org.jetbrains.exposed:exposed-jdbc:${exposedVersion}")
+
+    implementation("com.h2database:h2:${h2Version}")
 
     implementation("ch.qos.logback:logback-classic:${logbackVersion}")
 }
