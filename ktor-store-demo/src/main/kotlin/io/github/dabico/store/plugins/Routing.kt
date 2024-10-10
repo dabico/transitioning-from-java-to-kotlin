@@ -1,8 +1,10 @@
 package io.github.dabico.store.plugins
 
-import io.github.dabico.store.model.IN_MEMORY_PRODUCTS
+import io.github.dabico.store.model.Product
+import io.github.dabico.store.persistance.ProductDatabase
 import io.ktor.http.*
 import io.ktor.server.application.*
+import io.ktor.server.request.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
 
@@ -13,7 +15,17 @@ fun Application.configureRouting() {
         }
 
         get("/products") {
-            call.respond(IN_MEMORY_PRODUCTS)
+            call.respond(ProductDatabase.dao.products())
+        }
+
+        post("/add-product") {
+            val parsed = call.receive<Product>()
+            if (ProductDatabase.dao.exists(parsed.upc))
+                call.respond(HttpStatusCode.Conflict)
+            else
+                ProductDatabase.dao.addProduct(parsed)
+                    ?.let { call.respond(HttpStatusCode.Created, it) }
+                    ?:run { call.respond(HttpStatusCode.BadRequest) }
         }
     }
 }
