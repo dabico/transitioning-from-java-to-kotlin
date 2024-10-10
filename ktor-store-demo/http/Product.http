@@ -1,0 +1,18 @@
+### Get All Products
+GET http://0.0.0.0:8080/products
+Accept: application/json
+
+### Get Specific Product
+GET http://0.0.0.0:8080/products/1
+Accept: application/json
+
+### Add a new Product
+POST http://0.0.0.0:8080/add-product
+Content-Type: application/json
+Authorization: Basic YWRtaW46cGFzc3dvcmQ=
+
+{
+  "upc": 2,
+  "name": "Smartwatch",
+  "description": "Watch that tracks your activity and lifestyle"
+}
