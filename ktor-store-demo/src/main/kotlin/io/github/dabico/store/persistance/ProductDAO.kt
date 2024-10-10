@@ -15,6 +15,12 @@ class ProductDAO {
         }
     }
 
+    suspend fun product(upc: Int): Product? {
+        return query {
+            ProductTable.selectAll().where { ProductTable.upc eq upc }.firstOrNull()?.toProduct()
+        }
+    }
+
     suspend fun exists(upc: Int): Boolean {
         return query {
             !ProductTable.selectAll().where { ProductTable.upc eq upc }.empty()
