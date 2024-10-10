@@ -1,5 +1,6 @@
 package io.github.dabico.store.plugins
 
+import io.github.dabico.store.model.IN_MEMORY_PRODUCTS
 import io.ktor.http.*
 import io.ktor.server.application.*
 import io.ktor.server.response.*
@@ -12,7 +13,7 @@ fun Application.configureRouting() {
         }
 
         get("/products") {
-            call.respondText { "List of products!" }
+            call.respond(IN_MEMORY_PRODUCTS)
         }
     }
 }
