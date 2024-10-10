@@ -20,5 +20,6 @@ repositories {
 dependencies {
     implementation("io.ktor:ktor-server-core-jvm")
     implementation("io.ktor:ktor-server-netty-jvm")
+    implementation("io.ktor:ktor-server-call-logging-jvm")
     implementation("ch.qos.logback:logback-classic:1.5.9")
 }
